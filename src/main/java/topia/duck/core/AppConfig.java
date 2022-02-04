@@ -2,6 +2,7 @@ package topia.duck.core;
 
 import topia.duck.core.discount.DiscountPolicy;
 import topia.duck.core.discount.FixDiscountPolicy;
+import topia.duck.core.discount.RateDiscountPolicy;
 import topia.duck.core.member.MemberRepository;
 import topia.duck.core.member.MemberService;
 import topia.duck.core.member.MemberServiceImpl;
@@ -23,7 +24,7 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 
