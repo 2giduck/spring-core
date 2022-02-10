@@ -7,7 +7,6 @@ import topia.duck.core.member.Grade;
 import topia.duck.core.member.Member;
 
 @Component
-@MainDiscountPolicy
 public class FixDiscountPolicy implements DiscountPolicy {
     private int discountFixAmount = 1000;
 

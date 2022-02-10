@@ -7,9 +7,9 @@ import topia.duck.core.discount.DiscountPolicy;
 import topia.duck.core.member.Member;
 import topia.duck.core.member.MemberRepository;
 
-@Component
 @RequiredArgsConstructor
-public class OrderServiceImpl implements  OrderService{
+@Component
+public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
