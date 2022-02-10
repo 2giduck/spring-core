@@ -1,8 +1,10 @@
 package topia.duck.core.discount;
 
+import org.springframework.stereotype.Component;
 import topia.duck.core.member.Grade;
 import topia.duck.core.member.Member;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
     private int discountFixAmount = 1000;
 
