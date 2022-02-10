@@ -3,7 +3,7 @@ package topia.duck.core.lifecycle;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class NetworkClient implements InitializingBean, DisposableBean {
+public class NetworkClient {
     private String url;
 
     public NetworkClient(){
@@ -28,14 +28,11 @@ public class NetworkClient implements InitializingBean, DisposableBean {
         System.out.println("close "+url);
     }
 
-    @Override
-    public void destroy() throws Exception {
+    public void close(){
         disconnect();
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        connect();
+    public void init(){
         call("초기화 연결 메시지");
     }
 }
